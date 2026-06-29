@@ -1,0 +1,174 @@
+/* ===========================
+   Romantic Date Website
+   style.css
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,body{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+}
+
+body{
+
+    background:#090b14;
+
+    color:white;
+
+    font-family:"Montserrat",sans-serif;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+/* ---------- Звезды ---------- */
+
+#stars{
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+    radial-gradient(circle at 20% 20%,rgba(255,255,255,.9) 2px,transparent 3px),
+    radial-gradient(circle at 80% 35%,rgba(255,255,255,.8) 1px,transparent 2px),
+    radial-gradient(circle at 40% 70%,rgba(255,255,255,.7) 2px,transparent 3px),
+    radial-gradient(circle at 70% 80%,rgba(255,255,255,.6) 1px,transparent 2px),
+    radial-gradient(circle at 15% 85%,rgba(255,255,255,.8) 2px,transparent 3px),
+    radial-gradient(circle at 90% 10%,rgba(255,255,255,.8) 1px,transparent 2px);
+
+    animation:starsMove 35s linear infinite;
+
+    opacity:.8;
+
+}
+
+@keyframes starsMove{
+
+    from{
+
+        transform:translateY(0);
+
+    }
+
+    to{
+
+        transform:translateY(-80px);
+
+    }
+
+}
+
+/* ---------- Сердечки ---------- */
+
+#hearts{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+}
+
+/* ---------- Экраны ---------- */
+
+.screen{
+
+    position:absolute;
+
+    inset:0;
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:25px;
+
+}
+
+.screen.active{
+
+    display:flex;
+
+}
+
+/* ---------- Стекло ---------- */
+
+.glass{
+
+    width:min(92%,650px);
+
+    padding:35px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    text-align:center;
+
+    box-shadow:
+
+    0 0 40px rgba(255,255,255,.05),
+
+    0 0 120px rgba(255,0,120,.08);
+
+}
+
+.small{
+
+    color:#ffb5d2;
+
+    letter-spacing:3px;
+
+    margin-bottom:15px;
+
+    font-size:14px;
+
+}
+
+h1{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:58px;
+
+    margin-bottom:20px;
+
+}
+
+h2{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:44px;
+
+    margin-bottom:20px;
+
+}
+
+.subtitle{
+
+    line-height:1.8;
+
+    opacity:.9;
+
+    margin-bottom:35px;
+
+}
